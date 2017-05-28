@@ -9,7 +9,15 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-
+## Installing necessary packages
+Install some packages first in order to run the proposed package.
+```{r}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(maps)
+library(graphics)
+```
 
 ## Accessing the package
 ```{r}
@@ -17,6 +25,7 @@ library(devtools)
 install_github("askia318/CSVProcess")
 library(CSVProcess)
 ```
+
 
 ## Introduction 
 This package contains five functions: fars_read, make_filename, fars_read_years, fars_summarize_years, and fars_map_state. They are functions to read and process CSV file and we will introduce them respectively.
