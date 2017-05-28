@@ -13,8 +13,10 @@ devtools::install_github("CSVProcess/askia318")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+It will read csv file "accident_2013.csv.bz2" and transfer it into a tibble.
 
 ```R
-...
+fars_read("accident_2013.csv.bz2")
 ```
+
+
