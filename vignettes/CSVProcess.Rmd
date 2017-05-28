@@ -40,7 +40,7 @@ error message; otherwise the function will call 'read_csv' function in "readr" p
 
 An example: 
 ```{r}
-fars_read("../data/accident_2013.csv.bz2")
+fars_read("/data/accident_2013.csv.bz2")
 ```
 
 ## make_filename
