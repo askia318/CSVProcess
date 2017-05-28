@@ -12,6 +12,7 @@ vignette: >
 ## Installing necessary packages
 Install some packages first in order to run the proposed package.
 ```{r}
+install.packages(c("dplyr", "readr","tidyr","maps","graphics"))
 library(readr)
 library(dplyr)
 library(tidyr)
