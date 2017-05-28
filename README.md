@@ -1,3 +1,4 @@
+[![Travis-CI Build Status](https://travis-ci.org/askia318/CSVProcess.svg?branch=master)](https://travis-ci.org/askia318/CSVProcess)
 # CSVProcess
 
 The goal of CSVProcess is to process a CSV file into a tibble, take a deeper look by filter and plot a diagram. 
