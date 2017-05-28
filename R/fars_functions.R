@@ -106,7 +106,7 @@ fars_read_years <- function(years) {
 #' @examples
 #' \donotrun{
 #' years <- list(2013,2014)
-#' fars_read_years(years)
+#' fars_summarize_years(years)
 #' }
 
 #'
