@@ -26,14 +26,6 @@ install_github("askia318/CSVProcess")
 library(CSVProcess)
 ```
 
-## Installing necessary packages
-```{r}
-library(readr)
-library(dplyr)
-library(tidyr)
-library(maps)
-library(graphics)
-```
 ## Introduction 
 This package contains five functions: fars_read, make_filename, fars_read_years, fars_summarize_years, and fars_map_state. They are functions to read and process CSV file and we will introduce them respectively.
 
