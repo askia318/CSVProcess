@@ -9,8 +9,17 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-This package contains five functions: fars_read, make_filename, fars_read_years, fars_summarize_years, and fars_map_state. They are functions to read and process CSV file and we will introduce them respectively.
 
+
+## Accessing the package
+```{r}
+library(devtools)
+install_github("askia318/CSVProcess")
+library(CSVProcess)
+```
+
+## Introduction 
+This package contains five functions: fars_read, make_filename, fars_read_years, fars_summarize_years, and fars_map_state. They are functions to read and process CSV file and we will introduce them respectively.
 
 ## fars_read
 
@@ -25,40 +34,49 @@ An example:
 fars_read("accident_2013.csv.bz2")
 ```
 
-## Styles
+## make_filename
 
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
+The function will transfer the year you input into an integer and output as a character
+named "accident_'year'.csv.bz2". You can input the year using \code{year} argument.
 
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
-
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+```{r}
+make_filename(2013)
 ```
 
-You can enable figure captions by `fig_caption: yes` in YAML:
+## fars_read_years
 
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
+The function will read files in the form "accident_'year'.csv.bz2" where 'year' is inputted
+by user, read the data as a tibble and then select columns 'MONTH' and 'year' as output.
+If file "accident_'year'.csv.bz2" does not exist, it will print a warning message and return
+NULL. You can input the year using \code{list(years)} argument.
 
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+```{r}
+years <- list(2013,2014)
+fars_read_years(years)
 ```
 
-Also a quote using `>`:
+## fars_summarize_years
+This function calls fars_read_years to read files in "accident_'year'.csv.bz2" form and
+outputs a tibble with column 'MONTH' and 'year' first. Then it unlists (MONTH, year) pairs,
+groups them, and counts their numbers. Finally, it "reshapes" the output as a tibble
+with "MONTH", "years" form where "years" is the list in the input.
+You can input the year using \code{list(years)} argument.
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+```{r}
+years <- list(2013,2014)
+fars_summarize_years(years)
+```
+
+## fars_map_state
+The function first transfers the input 'year' into a character as "accident_'year'.csv.bz2"
+and read the file "accident_'year'.csv.bz2" as a tibble valued as 'data', then it also
+transfers the input state.num' as an integer. Moreover, if the field 'data$STATE' does not
+contain 'state.num', the function will stop and print a message.
+If data$STATE contains state.num but has nothing to plot, the function will print
+"no accidents to plot" and return invisible diagram; otherwise the function will plot
+a diagram with LONGITUD in x-asix and LATITUDE in y-asix with points to indicate the
+distrubution. You can input the year using \code{state.num,year} argument.
+
+```{r}
+fars_map_state(42,2013)
+```
