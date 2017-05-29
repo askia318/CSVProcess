@@ -14,10 +14,10 @@ devtools::install_github("CSVProcess/askia318")
 
 ## Example
 
-* It will read csv file "accident_2013.csv.bz2" and transfer it into a tibble.
+* It will read csv file "data/accident_2013.csv.bz2" and transfer it into a tibble.
 
 ```R
-fars_read("accident_2013.csv.bz2")
+fars_read("data/accident_2013.csv.bz2")
 ```
 
 * It will transfer the inputted year into an integer and output a character "accident_'year'.csv.bz2"
