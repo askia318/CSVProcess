@@ -61,7 +61,7 @@ make_filename <- function(year) {
 #'
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
-#' @importFrom magrittr
+#' @importFrom magrittr "%>%"
 #'
 #' @return a tibble with columns 'MONTH' and 'year'
 #'
@@ -101,7 +101,7 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
 #' @importFrom tidyr spread
-#' @importFrom magrittr
+#' @importFrom magrittr "%>%"
 #'
 #' @return a tibble with columns 'MONTH' and 'years'
 #'
