@@ -14,9 +14,7 @@
 #' @return The function returns the content of the file in a tibble
 #'
 #' @examples
-#' \dontrun{
 #' fars_read("accident_2013.csv.bz2")
-#' }
 #'
 #' @export
 fars_read <- function(filename) {
@@ -39,10 +37,7 @@ fars_read <- function(filename) {
 #' @return The function returns a character in the form "accident_'year'.csv.bz2"
 #'
 #' @examples
-#' \dontrun{
 #' make_filename(2013)
-#' }
-#'
 #'
 #' @export
 make_filename <- function(year) {
@@ -66,10 +61,8 @@ make_filename <- function(year) {
 #' @return a tibble with columns 'MONTH' and 'year'
 #'
 #' @examples
-#' \dontrun{
 #' years <- list(2013,2014)
 #' fars_read_years(years)
-#' }
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -106,11 +99,8 @@ fars_read_years <- function(years) {
 #' @return a tibble with columns 'MONTH' and 'years'
 #'
 #' @examples
-#' \dontrun{
 #' years <- list(2013,2014)
 #' fars_summarize_years(years)
-#' }
-
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -142,9 +132,7 @@ fars_summarize_years <- function(years) {
 #' @return a graph with polts to show distrubitions in (LONGITUD,LATITUDE)
 #'
 #' @examples
-#' \dontrun{
 #' fars_map_state(42,2013)
-#' }
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
