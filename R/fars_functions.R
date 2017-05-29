@@ -36,7 +36,7 @@ fars_read <- function(filename) {
 #'
 #' @return The function returns a character in the form "accident_'year'.csv.bz2"
 #'
-#' @importFrom testthat, test_that
+#' @importFrom testthat test_that
 #'
 #' @examples
 #' make_filename(2013)
