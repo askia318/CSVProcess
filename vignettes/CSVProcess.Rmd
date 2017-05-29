@@ -12,6 +12,7 @@ vignette: >
 ```{r}
 library(dplyr)
 library(readr)
+library(stats)
 library(maps)
 library(graphics)
 library(tidyr)
