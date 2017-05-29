@@ -8,6 +8,15 @@ vignette: >
   %\VignetteEngine{knitr::knitr}
   %\VignetteEncoding{UTF-8}
 ---
+## Installing necessary packages
+```{r}
+library(dplyr)
+library(readr)
+library(maps)
+library(graphics)
+library(tidyr)
+```
+
 
 ## Accessing the package
 ```{r}

@@ -47,7 +47,7 @@ fars_read <- function(filename) {
 #' @export
 make_filename <- function(year) {
         year <- as.integer(year)
-        sprintf("data/accident_%d.csv.bz2", year)
+        sprintf("../data/accident_%d.csv.bz2", year)
 }
 
 #' Read CSV file and Filter data by Month and Year
