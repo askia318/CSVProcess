@@ -9,17 +9,6 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-## Installing necessary packages
-Install some packages first in order to run the proposed package.
-```{r}
-install.packages(c("dplyr", "readr","tidyr","maps","graphics"),repos = "http://cran.us.r-project.org")
-library(readr)
-library(dplyr)
-library(tidyr)
-library(maps)
-library(graphics)
-```
-
 ## Accessing the package
 ```{r}
 library(devtools)
@@ -40,7 +29,7 @@ error message; otherwise the function will call 'read_csv' function in "readr" p
 
 An example: 
 ```{r}
-fars_read("data/accident_2013.csv.bz2")
+fars_read("../data/accident_2013.csv.bz2")
 ```
 
 ## make_filename
