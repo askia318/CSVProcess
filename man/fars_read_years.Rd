@@ -19,9 +19,7 @@ If file "accident_'year'.csv.bz2" does not exist, it will print a warning messag
 NULL. You can input the year using \code{list(years)} argument.
 }
 \examples{
-\\donotrun{
 years <- list(2013,2014)
 fars_read_years(years)
-}
 
 }

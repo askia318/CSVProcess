@@ -25,8 +25,6 @@ a diagram with LONGITUD in x-asix and LATITUDE in y-asix with points to indicate
 distrubution. You can input the year using \code{state.num,year} argument.
 }
 \examples{
-\\donotrun{
 fars_map_state(42,2013)
-}
 
 }

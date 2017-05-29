@@ -20,8 +20,6 @@ error message; otherwise the function will call 'read_csv' function in "readr" p
 'tbl_df' function in "dplyr" package to read and transform the file into a tibble.
 }
 \examples{
-\\donotrun{
 fars_read("accident_2013.csv.bz2")
-}
 
 }

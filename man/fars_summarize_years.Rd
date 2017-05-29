@@ -20,9 +20,7 @@ with "MONTH", "years" form where "years" is the list in the input.
 You can input the year using \code{list(years)} argument.
 }
 \examples{
-\\donotrun{
 years <- list(2013,2014)
 fars_summarize_years(years)
-}
 
 }

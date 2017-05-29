@@ -17,9 +17,6 @@ The function will transfer the year you input into an integer and output as a ch
 named "accident_'year'.csv.bz2". You can input the year using \code{year} argument.
 }
 \examples{
-\\donotrun{
 make_filename(2013)
-}
-
 
 }
